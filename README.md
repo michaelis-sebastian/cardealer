@@ -40,8 +40,7 @@ Follow these steps to set up the project on your local machine.
 
 ## 1. Clone the repository
 ```
-git clone [https://github.com/yourusername/cardealership.git](https://github.com/yourusername/cardealership.git)
-This site was built using [GitHub Pages](https://pages.github.com/).
+git clone https://github.com/usersaccountname/cardealer.git
 
 cd cardealership
 ```
