@@ -1,11 +1,7 @@
-<!-- resources/views/customers/index.blade.php -->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Customers List</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css" />
-</head>
-<body>
+@extends('layouts.app')
+
+@section('content')
+
     <div class="container">
         <h1 class="mt-5">List of Customers</h1>
         <table class="table table-striped table-hover table-bordered">
@@ -16,8 +12,8 @@
                     <th>Email</th>
                     <th>Phone</th>
                     <th>Address</th>
-                    <th>Created At</th>
-                    <th>Updated At</th>
+                    <!-- <th>Created At</th>
+                    <th>Updated At</th> -->
                 </tr>
             </thead>
             <tbody>
@@ -28,12 +24,11 @@
                     <td>{{ $customer->email }}</td>
                     <td>{{ $customer->phone }}</td>
                     <td>{{ $customer->address }}</td>
-                    <td>{{ $customer->created_at }}</td>
-                    <td>{{ $customer->updated_at }}</td>
+                    <!-- <td>{{ $customer->created_at }}</td>
+                    <td>{{ $customer->updated_at }}</td> -->
                 </tr>
                 @endforeach
             </tbody>
         </table>
     </div>
-</body>
-</html>
+@endsection

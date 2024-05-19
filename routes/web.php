@@ -17,6 +17,7 @@ use App\Http\Controllers\ModelController;
 use App\Http\Controllers\VehicleController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DealerController;
+use App\Http\Controllers\SoldController;
 
 Route::get('/brands', [BrandController::class, 'index']);
 
@@ -27,6 +28,8 @@ Route::get('/vehicles', [VehicleController::class, 'index']);
 Route::get('/customers', [CustomerController::class, 'index']);
 
 Route::get('/dealers', [DealerController::class, 'index']);
+
+Route::get('/solds', [SoldController::class, 'index']);
 
 Route::get('/', function () {
     return view('welcome');

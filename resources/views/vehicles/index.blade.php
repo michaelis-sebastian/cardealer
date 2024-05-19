@@ -1,22 +1,19 @@
-<!-- resources/views/vehicles/index.blade.php -->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Vehicles List</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css" />
-    <style>
-        .vehicle-card {
-            margin-bottom: 30px;
-        }
-        .vehicle-card img {
-            height: 200px; /* Set the desired height for the images */
-            width: 100%; /* Ensure the image takes the full width of the card */
-            object-fit: cover; /* Cover the area without distorting the image */
-        }
-    </style>
-</head>
-<body>
+
+@extends('layouts.app')
+
+@section('content')
+
     <div class="container">
+        <style>
+            .vehicle-card {
+                margin-bottom: 30px;
+            }
+            .vehicle-card img {
+                height: 200px; /* Set the desired height for the images */
+                width: 100%; /* Ensure the image takes the full width of the card */
+                object-fit: cover; /* Cover the area without distorting the image */
+            }
+        </style>
         <h1 class="mt-5">List of Vehicles</h1>
 
         <!-- Filter Form -->
@@ -58,9 +55,8 @@
                 <div class="card">
                     <img src="{{ $vehicle->image_link }}" alt="{{ $vehicle->model->name }}" class="card-img-top">
                     <div class="card-body">
-                        <h5 class="card-title">{{ $vehicle->model->name }}</h5>
+                        <h5 class="card-title">{{ $vehicle->model->name }} ({{ $vehicle->year }})</h5>
                         <h6 class="card-subtitle mb-2 text-muted">{{ $vehicle->model->brand->name }}</h6>
-                        <p class="card-text">Year: {{ $vehicle->year }}</p>
                         <p class="card-text">Color: {{ $vehicle->color }}</p>
                         <p class="card-text">Price: ${{ number_format($vehicle->price, 2) }}</p>
                     </div>
@@ -72,5 +68,4 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+@endsection
