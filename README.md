@@ -4,10 +4,10 @@ Laravel Full Stack Car Dealership Project for ITE 19
 This is a Laravel application for managing car dealership operations. It includes modules for managing brands, models, vehicles, customers, dealers, and sales.
 
 Requirements
-PHP >= 8.0
-Composer
-MySQL
-Node.js & npm
+- PHP >= 8.0
+- Composer
+- MySQL
+- Node.js & npm
 
 Installation
 Follow these steps to set up the project on your local machine.
