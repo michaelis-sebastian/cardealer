@@ -54,7 +54,7 @@ Install JavaScript dependencies using npm:
 npm install
 ```
 ## 3. Environment setup
-Copy the .env.example file to create your .env file:
+Copy the `.env.example` file to create your `.env` file:
 ```
 cp .env.example .env
 ```
@@ -63,7 +63,7 @@ Generate an application key:
 php artisan key:generate
 ```
 ## 4. Configure the .env file
-Open the .env file and update the following lines with your database configuration:
+Open the `.env` file and update the following lines with your database configuration:
 ```
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -82,7 +82,7 @@ Seed the database with initial data:
 ```
 php artisan db:seed
 ```
-If you need to seed only specific tables, you can use the --class option. For example:
+If you need to seed only specific tables, you can use the `--class` option. For example:
 ```
 php artisan db:seed --class=SoldTableSeeder
 ```
@@ -91,7 +91,7 @@ Start the Laravel development server:
 ```
 php artisan serve
 ```
-Visit http://localhost:8000 in your web browser to see the application.
+Visit `http://localhost:8000` in your web browser to see the application.
 ## 9. Compile assets
 Compile the frontend assets:
 ```
