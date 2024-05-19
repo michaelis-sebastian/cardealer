@@ -1,0 +1,26 @@
+tabel migrations
+
+php artisan migrate --path=/database/migrations/2024_05_17_052704_create_brands_table.php
+php artisan migrate --path=/database/migrations/2024_05_17_052704_create_models_table.php
+php artisan migrate --path=/database/migrations/2024_05_17_052706_create_customers_table.php
+php artisan migrate --path=/database/migrations/2024_05_17_052706_create_dealers_table.php
+php artisan migrate --path=/database/migrations/2024_05_17_052705_create_vehicles_table.php
+php artisan migrate --path=/database/migrations/2024_05_17_052705_create_solds_table.php
+
+
+php artisan db:seed
+
+php artisan make:seeder BrandTableSeeder
+php artisan make:seeder ModelsTableSeeder
+php artisan make:seeder CustomersTableSeeder
+php artisan make:seeder DealersTableSeeder
+php artisan make:seeder VehiclesTableSeeder
+php artisan make:seeder SoldTableSeeder
+
+
+php artisan db:seed --class=SoldTableSeeder
+
+
+php artisan tinker
+
+php artisan migrate:rollback
